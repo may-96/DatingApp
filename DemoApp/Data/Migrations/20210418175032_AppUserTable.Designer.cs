@@ -9,7 +9,7 @@ namespace DemoApp.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
     [Migration("20210418175032_InitialCreate")]
-    partial class InitialCreate
+    partial class AppUserTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -18,7 +18,7 @@ namespace DemoApp.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.5");
 
-            modelBuilder.Entity("DemoApp.Entities.AppUser", b =>
+            modelBuilder.Entity("DemoApp.Entities.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
